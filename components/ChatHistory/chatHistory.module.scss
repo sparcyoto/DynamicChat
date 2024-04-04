@@ -1,0 +1,269 @@
+.suggestionContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .suggestionContainer {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 8px;
+  }
+}
+
+.suggestionItem {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+  cursor: pointer;
+
+  padding: 10px 16px;
+  border: 1px solid grey;
+  border-radius: 10px;
+
+  background-color: rgb(255, 255, 255);
+  &:hover {
+    background-color: rgb(229, 236, 240);
+
+    // background-clip: padding-box;
+  }
+
+  &:hover {
+    & svg {
+      visibility: visible;
+    }
+  }
+}
+
+.suggestionItemSentIcon {
+  visibility: hidden;
+}
+
+.bottomContainerParent {
+  width: 100vw;
+  position: fixed;
+  bottom: 10px;
+  margin: auto;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+}
+
+.mainContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  // height: calc(100vh - 58px);
+  padding: 10px;
+
+  background-color: rgb(229, 236, 240);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  width: 600px !important;
+  // width: 100%;
+  padding: 8px 16px;
+  border: 1px solid rgb(136, 134, 134);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 10;
+
+  background-color: white;
+
+  & * {
+    background-color: white;
+  }
+}
+
+.userQuestionSectionContainer {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(218, 226, 231);
+
+  border-radius: 10px;
+
+  display: flex;
+  gap: 8px;
+}
+
+.GeneratingQueryContainer {
+  width: 100%;
+  padding: 10px;
+  // background-color: rgb(179, 199, 211);
+  background-color: white;
+
+  border-radius: 10px;
+
+  display: flex;
+  gap: 6px;
+
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  height: 0 !important;
+  padding: 0px;
+  margin: 0px;
+}
+
+.show {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in;
+  height: auto !important;
+}
+
+.solutionDetailsSectionHeader {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.solutionDetailsSectionHeaderShow {
+  display: block;
+  visibility: visible;
+}
+
+.solutionDetailsSectionHeaderHide {
+  display: none;
+  visibility: hidden;
+}
+
+.hideFull {
+  display: none;
+  transition: display 0.9s ease-in;
+  // height: 0 !important;
+  // padding: 0px;
+  // margin: 0px;
+}
+
+.showFull {
+  display: block;
+  transition: display 0.9s ease-in;
+}
+
+.databaseQuerySectionContainer {
+  width: 100%;
+  padding: 0px 10px;
+  // background-color: rgb(179, 199, 211);
+  background-color: white;
+
+  border-radius: 10px;
+  opacity: 0;
+  height: 0;
+}
+
+.divider {
+  width: 100%;
+
+  border-top: 1px solid rgb(180, 178, 178);
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+.customAccordionContainer {
+  // display: flex;
+  gap: 4px;
+}
+
+.renderSectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.disableInitialSuggestionQuestion {
+  pointer-events: none;
+}
+
+.solutionDetailsSectionContainer {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.solutionDetailsHeaderSection {
+  display: flex;
+  gap: 8px;
+}
+
+.databaseQuerySectionHeading {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.circularProgress {
+  width: 20px !important;
+  height: 20px !important;
+
+  & * {
+    color: rgb(93, 219, 93);
+  }
+}
+
+.inputBoxIcon {
+  display: flex;
+  gap: 4px;
+}
+
+.satisfactoryFeedbackSectionContainer {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+
+  margin-top: 8px;
+  padding-bottom: 70px;
+
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+
+.satisfactoryFeedbackSectionIconContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.thumbUpIcon {
+  &:hover {
+    color: green;
+  }
+}
+
+.thumbDownIcon {
+  &:hover {
+    color: red;
+  }
+}
+
+.listComponentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listComponentItem {
+  display: grid;
+  gap: 8px;
+
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
